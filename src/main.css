@@ -1,0 +1,250 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./images/wook-panel.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(93, 174, 159, 0.7);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*To-Do List*/
+
+#toDoList{
+    max-width: 70%;
+    max-height: 80%;
+    min-width: 50%;
+    min-height: 70%;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgb(63, 39, 39);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*END To-Do List*/
+
+/*HEADER*/
+
+header{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    background-color: rgb(195, 141, 157);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+    padding: 10px;
+    padding-left: 30px;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
+img[alt="list image"]{
+    max-height: 60px;
+    max-width: 60px;
+    filter: grayscale(100%) brightness(1000%) contrast(100%);
+    margin: 0;
+    padding: 10px;
+    padding-left: 0;
+    border: 0;
+}
+
+/*END HEADER*/
+
+/*PANEL*/
+
+#panel{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "panel list";
+}
+
+/*LEFT PANEL*/
+
+#leftPanel{
+    grid-area: panel;
+    background-color: rgb(238, 238, 238);
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*TOP LEFT PANEL*/
+
+#topLeftPanel{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    border: 0;
+}
+
+ul li:first-child{
+    padding-top: 50px;
+}
+
+.name{
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: rgb(86, 81, 77);
+}
+
+/*PROJECTS*/
+
+#projects{
+    max-height: 250px; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style-type: none;
+}
+
+/*END PROJECTS*/
+
+/*END TOP LEFT PANEL*/
+
+/*BOTTOM LEFT PANEL*/
+
+#bottomLeftPanel{
+    flex: 0;
+    margin: 30px;
+    padding: 0;
+    border: 0;
+}
+
+#plusButton{
+    border-radius: 30px;
+    margin: 0;
+    border: 0;
+    height: 60px;
+    width: 60px;
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 3em;
+    color: white;
+    background-color: rgb(195, 141, 157);
+    box-shadow: 2px 2px 10px black;
+}
+
+/*END BOTTOM LEFT PANEL*/
+
+/*END LEFT PANEL*/
+
+/*RIGHT PANEL*/
+
+#rightPanel{
+    grid-column: list;
+    background-color: rgb(245, 248, 247);
+    border-bottom-right-radius: 15px;
+}
+
+/*END RIGHT PANEL*/
+
+/*END PANEL*/
+
+/*HOME - TODAY - WEEK - INSIDE PROJECTS*/
+
+.toDoElement{
+    min-width: 80em;
+    max-width: 80em;
+    min-height: 10em;
+    max-height: 12em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.toDoLeft{
+    flex: 1;
+
+}
+
+.toDoLeft,
+.toDoRight{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.title{
+    font-size: 1em;
+}
+
+.checkBox{
+
+}
+
+.details{
+    background-color: transparent;
+    border: 1px solid rgb(12, 160, 186);
+    color: rgb(12, 160, 186);
+    border-radius: 6px;
+    min-height: 2em;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+.date{
+    color: rgb(86, 60, 78);
+    font-size: 0.5em;
+}
+
+.edit-delete{
+    max-width: 0.5em;
+    min-width: 0.5em;
+    color: rgb(86, 60, 78);
+}
+
+/*END HOME - TODAY - WEEK - INSIDE PROJECTS*/

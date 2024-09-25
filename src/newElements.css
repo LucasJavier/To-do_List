@@ -1,0 +1,318 @@
+/*EXTRAS*/
+
+#blurBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); 
+    z-index: 1; 
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #333;
+    margin: 0 auto;
+    margin-bottom: 2px;             
+    width: 100%;
+}
+
+/*END EXTRAS*/
+
+/*CONTAINER*/
+
+#mainContainer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 65%;
+    max-height: 70%;
+    min-width: 60%;
+    min-height: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    color: white;
+}
+
+h4{
+    margin: 0;
+    padding: 10px;
+    padding-left: 30px;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+/*END HEADER*/
+
+/*PANEL*/
+
+/*LEFT PANEL*/
+
+ul{
+    padding-left: 20px;
+}
+
+h6{
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: rgb(86, 81, 77);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h6:hover{
+    cursor: crosshair;
+    color: rgb(65, 16, 50);
+    font-size: 1.8em;
+}
+
+
+.activedText{
+    color: rgb(65, 16, 50);
+    font-size: 1.8em;
+}
+
+.activedText::before{
+    content: "//";
+    margin-right: 0.4em;
+}
+
+/*END LEFT PANEL*/
+
+/*RIGHT PANEL*/
+
+#rightPanel{
+    grid-column: list;
+    background-color: rgb(245, 248, 247);
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    flex: 1;
+    display: flex;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+fieldset{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#titleDiv,
+#dueTimeDiv,
+#priorityAddDiv,
+#textAreaDiv{
+    margin: 0;
+    border: 0;
+    padding: 10px;
+}
+
+#titleDiv{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 0;
+}
+
+#textAreaDiv{
+    flex: 5;
+}
+
+/*TITLE & TEXT-AREA*/
+
+input[type="text"],
+textarea{
+    background: transparent; 
+    border: none;
+    outline: none;
+    padding-top: 10px;
+    
+}
+
+input[type="text"]{
+    font-size: 1.1em;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: vertical; /* Permite redimensionar solo en el eje-y */
+    overflow-y: auto; /* Muestra un scroller en el eje-y cuando el contenido se desborda */
+    
+}
+
+/*END TITLE & TEXT-AREA*/
+
+/*TIME & PRIORITY*/
+
+label{
+    padding-right: 10px;
+    color: rgb(24, 24, 24);
+    font-size: 1.2em;
+}
+
+input[type="date"] {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(12, 160, 186);
+    background-color: transparent;
+    border: 1px solid rgb(12, 160, 186);
+    padding: 5px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+#priorityAddDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+#divBetweenRadio{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#radioButtonsDiv{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    gap: 5px;
+}
+
+input[type="radio"]{
+    position: relative;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    left: -2.7em;
+}
+
+.priorityLabel{
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    min-width: 4em;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+#lowLabel{
+    color: rgb(87, 145, 84);
+    border: 1px solid rgb(87, 145, 84);
+}
+
+#lowLabel:hover{
+    color: white;
+    background-color: rgb(87, 145, 84);
+}
+
+#mediumLabel{
+    color: rgb(228, 168, 71);
+    border: 1px solid rgb(228, 168, 71);
+}
+
+#mediumLabel:hover{
+    color: white;
+    background-color: rgb(228, 168, 71);
+}
+
+#highLabel{
+    color: rgb(179, 34, 45);
+    border: 1px solid rgb(179, 34, 45);
+}
+
+#highLabel:hover{
+    color: white;
+    background-color: rgb(179, 34, 45);;
+}
+
+#lowLabel.activedLabel {
+    color: white;
+    background-color: rgb(87, 145, 84);
+}
+
+#mediumLabel.activedLabel {
+    color: white;
+    background-color: rgb(219, 163, 63);
+}
+
+#highLabel.activedLabel {
+    color: white;
+    background-color: rgb(219, 63, 63);
+}
+
+#divBetweenSubmit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button[type="submit"]{
+    background-color: transparent;
+    border: 1px solid rgb(12, 160, 186);
+    color: rgb(12, 160, 186);
+    border-radius: 6px;
+    min-height: 2em;
+    cursor: pointer;
+    max-width: 150px;
+}
+
+button[type="submit"]:hover{
+    color: white;
+    background-color: rgb(16, 192, 224);
+}
+
+#note-project-submit{
+    margin: 20px;
+    padding: 8px;
+}
+
+/*END TIME & PRIORITY*/
+
+/*END RIGHT PANEL*/
+
+/*END PANEL*/
+
+/*END CONTAINER*/
